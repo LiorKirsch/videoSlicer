@@ -1,4 +1,6 @@
 # Django settings for youtubeSlicerWeb project.
+import os
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -12,7 +14,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/media/datadisk/face workspace/youtubeSlicerWeb/sqlite.db',                      # Or path to database file if using sqlite3.
+        'NAME': os.path.join(PROJECT_PATH, 'sqlite.db'),                       # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -20,7 +22,7 @@ DATABASES = {
     }
 }
 
-VIDEO_ROOT = '/media/datadisk/face workspace/youtubeSlicerWeb/videoFolder'
+VIDEO_ROOT = os.path.join(PROJECT_PATH, 'videoFolder')
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

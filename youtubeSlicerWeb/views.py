@@ -1,23 +1,13 @@
-from django.shortcuts import get_object_or_404, render_to_response
-from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import render_to_response
+from django.http import HttpResponse
 from django.template import RequestContext
-from django.core.urlresolvers import reverse
-from django.shortcuts import render
 from django.conf import settings
 
-import cStringIO
-import datetime
 
-#from django.template import RequestContext
 from django.utils import simplejson 
-from django.views.decorators.csrf import csrf_exempt
 from django.core.servers.basehttp import FileWrapper
 
 from cutVideo import VideoCutter
-import subprocess
-from urlparse import parse_qs, urlparse
-import os
-import sys
 import youtube_dl
 
 VIDEO_FOLDER = settings.VIDEO_ROOT
