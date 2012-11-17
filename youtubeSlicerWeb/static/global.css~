@@ -1,0 +1,32 @@
+#mainDiv {
+  text-align: center ;
+
+  width: 700px ;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+.numberBox{
+  width:30px
+}
+
+.loadingGif{
+	display: none;
+}
+
+.urlBox{
+  width:300px
+}
+
+#youtubeIFrame {
+	display: none;
+}
+
+#vimeoIFrame {
+	display: none;
+}
+
+#videoThumb{
+	display:none;
+	height:315;
+}
